@@ -1,7 +1,7 @@
 {
   "name": "vue-mobile-img-upload",
   "description": "a Vue.js mobile image uplaod component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "brankcar <lijiasichina@qq.com>",
   "license": "MIT",
   "private": false,
@@ -67,7 +67,11 @@
     "url": "https://github.com/brankcar/vue-mobile-img-upload.git",
     "type": "git"
   },
-  "keywords": ["vue", "image", "upload"],
+  "keywords": [
+    "vue",
+    "image",
+    "upload"
+  ],
   "files": [
     "dist/build.js"
   ]
