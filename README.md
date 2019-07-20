@@ -115,6 +115,8 @@ export default {
 </style>
 ```
 **config options**
+
+
 property | type | description
 ---|---|---
 api | String | interface address
@@ -127,6 +129,7 @@ accept | Array | <input type="file" accept="">，Attributes，default value：['
 isReduce | Boolearn | Compressed images, only when this property is set, the compressed image method will only be called once. If the size limit is exceeded after compression, an error is thrown. If isRecursive is true, no error will be reported.
 isRecursive | Boolearn | Call recursively compressed images. If this property is true, no error message will be thrown for the image size limit.
 quality | Number | Image compression quality. 0 ~ 1.0
+
 
 property | type | description
 ---|---|---
@@ -141,6 +144,8 @@ isRecursive | Boolearn | 调用递归压缩图像。如果此属性为真，则�
 quality | Number | 图片压缩质量，0 ~ 1.0
 
 **methods config**
+
+
 Function | arguments | description
 ---|---|---
 onError | err<Object> | This method accepts an object of the form { type: String, num: Number }, type => error type ('size', 'length'); num => the verification value of the error.
@@ -153,7 +158,7 @@ Function | arguments | description
 ---|---|---
 onError | err<Object> | 该方法接受一个对象，该对象格式为 { type: String, num: Number }，type => 错误类型('size','length')；num => 该次错误的验证值
 upload | null | this.$refs.upload.upload(this.paramsOptions, 'key'); // 请看例子
-paramsOptions | 上传文件之前的配置函数，该函数可自定义，但是必须返回 { params,  config }, params => 上传图片前的接口参数配置，config => axios 配置
+paramsOptions | null | 上传文件之前的配置函数，该函数可自定义，但是必须返回 { params,  config }, params => 上传图片前的接口参数配置，config => axios 配置
 uploadFinally | args<arguments>, files<Array> | <核心方法>该函数接受一个 arguments 与 Array，arguments 为 axios.all 执行后的所有 Promise 集合，Array 为组件内部的文件集合，该属性因为是子组件调用父组件方法传递过来的，该属性内置了 __ob__ 观察者，操作该属性可动态改变该组件已选择的图片。在该函数内可获得图片上传接口的信息，在该函数内可直接操作本组件内的关键对象，以便后续的交互，比如，files 集合删除已成功上传的文件，再调用 upload 方法可将集合中剩余的文件重复上传。
 
 
