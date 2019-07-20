@@ -3,25 +3,21 @@
 移动端 Vue.js 上传预览图片组件
 > a Vue.js mobile image uplaod component
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
 该组件使用了 `axios` 工具上传文件，如果需要使用该组件请先：
 > This component uses the `axios` tool to upload files. If you need to use this component, please first:
 
-
 ```
 npm install axios
+```
+
+**npm install**
+```
+npm install vue-mobile-img-upload
+```
+
+**yarn**
+```
+yarn add vue-mobile-img-upload
 ```
 
 > 在使用该组件时只需要在父组件配置 `config` 并使用 `v-bind` 指令绑定
@@ -31,8 +27,6 @@ npm install axios
 
 
 ```
-npm install vue-mobile-img-upload
-
 // main.js
 import Upload from 'vue-img-upload'
 import Vue from 'vue'
@@ -163,5 +157,18 @@ paramsOptions | null | 上传文件之前的配置函数，该函数可自定义
 uploadFinally | args<arguments>, files<Array> | <核心方法>该函数接受一个 `arguments` 与 `Array`，`arguments` 为 `axios.all` 执行后的所有 `Promise` 集合，`Array` 为组件内部的文件集合，该属性因为是子组件调用父组件方法传递过来的，该属性内置了 `__ob__` 观察者，操作该属性可动态改变该组件已选择的图片。在该函数内可获得图片上传接口的信息，在该函数内可直接操作本组件内的关键对象，以便后续的交互，比如，`files` 集合删除已成功上传的文件，再调用 `upload` 方法可将集合中剩余的文件重复上传。
 
 
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

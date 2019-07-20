@@ -151,69 +151,86 @@
       margin: auto;
       background: $gray-bg;
   }
-  li {
-    position: relative;
-    input[type="file"] {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      font-size: 0;
-      line-height: 0;
-      vertical-align: middle;
-      z-index: 2;
-    }
-    &:before {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      width: 0;
-      vertical-align: middle;
-    }
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      vertical-align: middle;
-    }
-    .add-image {
-      @include add();
-      width: 40%;
-      height: 5%;
-      &:before {
-        content: '';
-        @include add();
-        width: 100%;
-        height: 100%;
-        transform: rotate(90deg)
-      }
-    }
-    .delete {
-      position: absolute;
-      top: -.5rem;
-      right: -.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50%;
-      background: #000;
-      &:after,
-      &:before {
-        content: '';
-        @include add();
-        width: 2px;
-        height: 80%;
-      }
-      &:before {
-        transform: rotate(-45deg)
-      }
-      &:after {
-        transform: rotate(45deg)
+  .upload-row{
+    margin: 0 15px;
+    .uploader {
+      width: calc(100% + 10px);
+      list-style: none;
+      li {
+        position: relative;
+        float: left;
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 6.5rem;
+        height: 6.5rem;
+        margin: 10px 10px 10px 0;
+        border: 1px solid #dcdcdc;
+        input[type="file"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          font-size: 0;
+          line-height: 0;
+          vertical-align: middle;
+          z-index: 2;
+        }
+        &:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          width: 0;
+          vertical-align: middle;
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          vertical-align: middle;
+        }
+        .add-image {
+          @include add();
+          width: 40%;
+          height: 5%;
+          &:before {
+            content: '';
+            @include add();
+            width: 100%;
+            height: 100%;
+            transform: rotate(90deg)
+          }
+        }
+        .delete {
+          position: absolute;
+          top: -.5rem;
+          right: -.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 50%;
+          background: #000;
+          &:after,
+          &:before {
+            content: '';
+            @include add();
+            width: 2px;
+            height: 80%;
+          }
+          &:before {
+            transform: rotate(-45deg)
+          }
+          &:after {
+            transform: rotate(45deg)
+          }
+        }
+        &:first-child {
+          border-color: #999;
+        }
       }
     }
   }

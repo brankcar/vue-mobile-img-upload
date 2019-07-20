@@ -60,5 +60,15 @@
       "html",
       "text-summary"
     ]
-  }
+  },
+  "homepage": "https://github.com/brankcar/vue-mobile-img-upload",
+  "bugs": "https://github.com/brankcar/vue-mobile-img-upload/issues",
+  "repository": {
+    "url": "https://github.com/brankcar/vue-mobile-img-upload.git",
+    "type": "git"
+  },
+  "keywords": ["vue", "image", "upload"],
+  "files": [
+    "dist/build.js"
+  ]
 }

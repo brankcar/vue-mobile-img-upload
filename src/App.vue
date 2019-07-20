@@ -88,23 +88,4 @@ export default {
     text-align: center;
     color: #2c3e50;
   }
-  .upload-row{
-    margin: 0 15px;
-    .uploader {
-      width: calc(100% + 10px);
-      list-style: none;
-      li {
-        float: left;
-        padding: 5px;
-        margin-bottom: 10px;
-        width: 6.5rem;
-        height: 6.5rem;
-        margin: 10px 10px 10px 0;
-        border: 1px solid #dcdcdc;
-        &:first-child {
-          border-color: #fe7457;
-        }
-      }
-    }
-  }
 </style>
