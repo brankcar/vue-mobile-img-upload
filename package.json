@@ -1,7 +1,7 @@
 {
   "name": "vue-mobile-img-upload",
   "description": "a Vue.js mobile image uplaod component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "brankcar <lijiasichina@qq.com>",
   "license": "MIT",
   "private": false,
